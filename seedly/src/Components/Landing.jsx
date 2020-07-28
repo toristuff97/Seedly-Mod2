@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {Router} from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 
 export default class Landing extends Component {
     render() {
