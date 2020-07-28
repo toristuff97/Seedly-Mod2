@@ -18,7 +18,13 @@ export default class Home extends Component {
                     </div>
                     <div className="Prompt">
                         <h2 style={{fontFamily: "Pacifico", fontSize: "30pt", color: "#000000"}}>What do you want to grow?</h2>
-                        
+                        <Link to="/NewPlant">
+                        <button style={{fontFamily: "SignPainter", fontSize: "25pt", color: "#45BA9B", width: "200px", height: "60px", border: "none"}}>New Plant</button>
+                        </Link>
+                        <br/> <br/>
+                        <Link to="/Explore">
+                        <button style={{fontFamily: "SignPainter", fontSize: "25pt", color: "#45BA9B", width: "200px", height: "60px", border: "none"}}>Explore</button>
+                        </Link>
                     </div>
                 </div>
             </Router>
