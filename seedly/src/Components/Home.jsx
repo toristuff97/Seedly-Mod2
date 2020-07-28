@@ -16,6 +16,10 @@ export default class Home extends Component {
                         <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>My Plots&nbsp; &nbsp;</h2>
                         <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Calendar&nbsp; &nbsp;</h2>
                     </div>
+                    <div className="Prompt">
+                        <h2 style={{fontFamily: "Pacifico", fontSize: "30pt", color: "#000000"}}>What do you want to grow?</h2>
+                        
+                    </div>
                 </div>
             </Router>
         )
