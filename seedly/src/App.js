@@ -6,6 +6,7 @@ import Landing from './Components/Landing'
 import Home from './Components/Home'
 import NewPlant from './Components/NewPlant'
 import Explore from './Components/Explore'
+import MyPlants from './Components/MyPlants'
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/Explore">
             <Explore />
+          </Route>
+          <Route path="/MyPlants">
+            <MyPlants />
           </Route>
         </div>
         </Switch>
