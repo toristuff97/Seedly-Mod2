@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 
 class MyPlants extends Component {
 
-    construcor()
+    constructor(props) {
+        super(props)
+        this.state = {
+            savedPlants: [{}]
+        }
+    }
 
     render() {
         return (
