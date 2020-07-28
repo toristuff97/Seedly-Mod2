@@ -14,13 +14,15 @@ function App() {
       <Route exact path="/">
         <Landing />
       </Route>
-      <Route exact path="/Home">
+      <Route path="/Home">
         <Home />
       </Route>
-      <Route exact path="/NewPlant">
+      <Route path="/NewPlant">
         <NewPlant />
       </Route>
-      
+      <Route path="/Explore">
+        <Explore />
+      </Route>
     </div>
     </Router>
   );
