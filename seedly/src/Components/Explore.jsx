@@ -20,7 +20,7 @@ class Explore extends Component {
                 try {
                     const res = await axios.get(BASE_URL + 'plants?token=' + TOKEN + '&filter_not[description]');
                     console.log(res.data);
-                    this.setState({plantInfo: res.data.results});
+                    this.setState({plantInfo: res.data.data});
                 } catch(err) {
                     console.error(err.message);
                 }
@@ -111,8 +111,8 @@ class Explore extends Component {
                         console.log(plant);
                         return(
                             <div>
-                                <h4 style={{color: "black", fontFamily: "Pacifico", fontSize:"10pt"}}>Name: {plant.common_name}</h4>
-                                <img src={plant.image_url} alt="Plant" />
+                                <h4 style={{color: "black", fontFamily: "Pacifico", fontSize:"10pt"}}>Name: {plant.data.common_name}</h4>
+                                <img src={plant.data.image_url} alt="Plant" />
                             </div>
                         )
                     })
