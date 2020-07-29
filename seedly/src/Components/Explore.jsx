@@ -13,7 +13,8 @@ class Explore extends Component {
     constructor(props) {
         super(props)
         this.state= {
-            info: []
+            info: [],
+            pages: []
         }
     }
 
@@ -22,6 +23,7 @@ class Explore extends Component {
                     const res = await axios.get(BASE_URL + 'plants?token=' + TOKEN + '&filter_not[description]');
                     console.log(res.data);
                     this.setState({info: res.data.data});
+                    this.setState ({pages: ((res.data.meta.total)/30)})
                 } catch(err) {
                     console.error(err.message);
                 }
@@ -98,7 +100,7 @@ class Explore extends Component {
                     })
                 }
                 <div className="Pages">
-
+                    
                 </div>
                 </div>
             </div>
