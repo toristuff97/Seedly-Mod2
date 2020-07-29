@@ -29,6 +29,17 @@ class Explore extends Component {
         this.explorePlants();
     }
 
+    // Below goes inside ExplorePlants component (replace what needs to be replaced)
+    // {
+    //     this.state.info.map((index,id) => {
+    //         return (
+    //           <div className="theFriends" key={id}>
+    //             <h2>My first name is {index.firstname}.</h2>
+    //             <h2>My last name is {index.lastname}.</h2>
+    //             <h3>My email is {index.email}.</h3>
+    //           </div>
+    //         )
+    //       })}
     
     render() {
         return (
