@@ -4,8 +4,9 @@ import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
 import ExplorePlants from './ExplorePlants';
 
+
 const BASE_URL = 'https://trefle.io/api/v1/'
-const TOKEN = 'PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk'
+const TOKEN = process.env.REACT_APP_API_KEY
 
 
 class Explore extends Component {
@@ -29,33 +30,6 @@ class Explore extends Component {
             componentDidMount() {
                 this.explorePlants();
             }
-
-    // Below goes inside Results component (replace what needs to be replaced)
-    // {
-    //     this.state.info.map((index,id) => {
-    //         return (
-    //           <div className="theFriends" key={id}>
-    //             <h2>My first name is {index.firstname}.</h2>
-    //             <h2>My last name is {index.lastname}.</h2>
-    //             <h3>My email is {index.email}.</h3>
-    //           </div>
-    //         )
-    //       })}
-
-    // Another example of the above
-    // {
-    //     this.state.info.map(person => {
-    //         console.log(person);
-    //         return (
-    //             <div className="people">
-    //                 <h1>{person.name}</h1>
-    //                 <h2>They weigh {person.mass} kg.</h2>
-    //                 <h3>They are {person.height} cm tall.</h3>
-    //             </div>
-    //         )
-    //     })
-    // }
-
 
     render() {
         return (
@@ -137,3 +111,29 @@ export default Explore;
 // https://trefle.io/api/v1/species/cirsium-oleraceum?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk
 
 // I THINK I have to do (BASE_URL + 'plants/token={TOKEN}&filter[growth_habit]&&filter_not[row_spacing]') and then do the map thing with each specific plant result with the description, growth habit, common name, etc. 
+
+   // Below goes inside Results component (replace what needs to be replaced)
+    // {
+    //     this.state.info.map((index,id) => {
+    //         return (
+    //           <div className="theFriends" key={id}>
+    //             <h2>My first name is {index.firstname}.</h2>
+    //             <h2>My last name is {index.lastname}.</h2>
+    //             <h3>My email is {index.email}.</h3>
+    //           </div>
+    //         )
+    //       })}
+
+    // Another example of the above
+    // {
+    //     this.state.info.map(person => {
+    //         console.log(person);
+    //         return (
+    //             <div className="people">
+    //                 <h1>{person.name}</h1>
+    //                 <h2>They weigh {person.mass} kg.</h2>
+    //                 <h3>They are {person.height} cm tall.</h3>
+    //             </div>
+    //         )
+    //     })
+    // }
