@@ -3,7 +3,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
 
-const BASE_URL = 'https://trefle.io/api/'
+const BASE_URL = 'https://trefle.io/api/v1/'
 const TOKEN = process.env.REACT_APP_API_KEY
 
 class Explore extends Component {
@@ -17,7 +17,7 @@ class Explore extends Component {
 
     async explorePlants() {
         try {
-            const res = await axios.get(BASE_URL + 'v1/plants?token={TOKEN}&filter_not[description]');
+            const res = await axios.get(BASE_URL + 'plants?token={TOKEN}&filter_not[description]');
             console.log(res.data);
             this.setState({plantInfo: res.data});
         } catch(err) {
@@ -40,6 +40,20 @@ class Explore extends Component {
     //           </div>
     //         )
     //       })}
+
+    // Another example of the above
+    // {
+    //     this.state.info.map(person => {
+    //         console.log(person);
+    //         return (
+    //             <div className="people">
+    //                 <h1>{person.name}</h1>
+    //                 <h2>They weigh {person.mass} kg.</h2>
+    //                 <h3>They are {person.height} cm tall.</h3>
+    //             </div>
+    //         )
+    //     })
+    // }
 
 
     render() {
@@ -99,3 +113,5 @@ export default Explore
 
 // Showing ALLLLLL of the info for a specific plant:
 // https://trefle.io/api/v1/species/cirsium-oleraceum?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk
+
+// I THINK I have to do (BASE_URL + 'plants/token={TOKEN}&filter[growth_habit]&&filter_not[row_spacing]') and then do the map thing with each specific plant result with the description, growth habit, common name, etc. 
