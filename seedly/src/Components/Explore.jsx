@@ -25,6 +25,10 @@ class Explore extends Component {
         }
     }
 
+    componentDidMount() {
+        this.explorePlants();
+    }
+
     
     render() {
         return (
