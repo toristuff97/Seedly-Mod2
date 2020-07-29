@@ -29,7 +29,7 @@ class Explore extends Component {
         this.explorePlants();
     }
 
-    // Below goes inside ExplorePlants component (replace what needs to be replaced)
+    // Below goes inside Results component (replace what needs to be replaced)
     // {
     //     this.state.info.map((index,id) => {
     //         return (
@@ -40,7 +40,8 @@ class Explore extends Component {
     //           </div>
     //         )
     //       })}
-    
+
+
     render() {
         return (
             <div className="ExplorePage">
@@ -85,7 +86,7 @@ class Explore extends Component {
                     <br/> <br/>
                 </div>
                 <div className="Results">
-
+                    <h3>Results</h3>
                 </div>
 
             </div>
@@ -93,3 +94,8 @@ class Explore extends Component {
     }
 }
 export default Explore
+// Filtering by plants that have growth_habit included and no edible parts:
+// https://trefle.io/api/v1/plants?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk&filter[growth_habit]&&filter_not[edible_part]
+
+// Showing ALLLLLL of the info for a specific plant:
+// https://trefle.io/api/v1/species/cirsium-oleraceum?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk
