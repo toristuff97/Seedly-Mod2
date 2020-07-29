@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
+import {BrowserRouter as Router} from 'react-router-dom';
+import {Route, Switch, Link} from 'react-router-dom';
 
-export default class Explore extends Component {
+class Explore extends Component {
     render() {
         return (
-            <div>
-                
+            <div className="ExplorePage">
+                <div className="Filter">
+
+                </div>
+                <div className="Results">
+
+                </div>
+
             </div>
         )
     }
 }
+export default Explore
