@@ -11,9 +11,15 @@ class Explore extends Component {
                     <h1 style={{fontFamily: "Pacifico", fontSize: "35pt", color: "black", position: "relative", top: "2vh", right: "43vw"}}>Seedly</h1>
                 </div>
                 <div className="Navbar">
+                    <Link to="/MyPlants" style={{textDecoration:"none"}}>
                     <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>My Plants&nbsp; &nbsp;</h2>
+                    </Link>
+                    <Link to="/MyPlots" style={{textDecoration:"none"}}>
                     <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>My Plots&nbsp; &nbsp;</h2>
+                    </Link>
+                    <Link to="/Calendar" style={{textDecoration:"none"}}>
                     <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Calendar&nbsp; &nbsp;</h2>
+                    </Link>
                 </div>
                 <div className="Filter">
                     <br/>
