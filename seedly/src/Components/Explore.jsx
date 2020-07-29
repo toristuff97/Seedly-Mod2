@@ -6,6 +6,9 @@ class Explore extends Component {
     render() {
         return (
             <div className="ExplorePage">
+                <div className="Navbar">
+                    <h1 style={{fontFamily: "Pacifico", fontSize: "35pt", color: "black", position: "relative", top: "20vh", right:"67vw"}}>Seedly</h1>
+                </div>
                 <div className="Filter">
                     <br/>
                     <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Vegetables</button> <br/>
