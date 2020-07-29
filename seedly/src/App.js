@@ -28,9 +28,6 @@ function App() {
           <Route path="/MyPlants">
             <MyPlants />
           </Route>
-          <Route path="/Explore">
-            <MyPlants />
-          </Route>
         </div>
         </Switch>
     </Router>
