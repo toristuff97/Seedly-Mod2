@@ -113,7 +113,7 @@ class Explore extends Component {
                         return(
                             <div>
                                 <h4 style={{color: "black", fontFamily: "Pacifico", fontSize:"10pt"}}>Name: {plant.common_name}</h4>
-                                <img src={plant.image_url} alt="Plant" />
+                                <img src={plant.image_url} style={{width: "5vw", height: "10vh"}} alt="Plant" />
                             </div>
                         )
                     })
