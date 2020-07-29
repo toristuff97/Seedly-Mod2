@@ -51,6 +51,22 @@
   bottom: 14vh;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~ HOME PAGE STYLING ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.ExplorePage {
+  background-color: #21D9A8;
+  height: 2000px;
+  width: 100vw;
+}
+
+.Filter {
+  position: relative;
+  top: 25vh;
+  background-color: #16C798;
+  margin-right: 5vw;
+  width: 15vw;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
