@@ -73,16 +73,22 @@
 }
 
 .Results {
-  border: white solid;
-  width: 75vw;
+  /* border: white solid; */
+  width: 80vw;
   position: relative;
   bottom: 72vh;
-  left: 20vw;
+  left: 18vw;
   display: flex;
   flex-wrap: wrap;
-  
+  justify-content: space-between;
+
 }
 
+.EachPlant {
+  flex-basis: 15vw;
+  background-color: #16C798;
+  border: #21D9A8 solid;
+}
 
 
 

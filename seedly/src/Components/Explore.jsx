@@ -113,8 +113,9 @@ class Explore extends Component {
                         console.log(plant);
                         console.log(plant.common_name);
                         return(
-                            <div>
-                                <h4 style={{color: "black", fontFamily: "SignPainter", fontSize:"15pt"}}>Name: {plant.common_name}</h4>
+                            <div className="EachPlant">
+                                <p style={{color: "black", fontFamily: "SignPainter", fontSize:"20pt"}}>Name:</p>
+                                <p style={{color: "black", fontFamily: "SignPainter", fontSize:"20pt"}}>{plant.common_name}</p>
                                 <img src={plant.image_url} style={{width: "5vw", height: "10vh"}} alt="Plant" />
                             </div>
                         )
