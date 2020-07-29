@@ -37,7 +37,9 @@ class Explore extends Component {
                 
                 <div className="Logo">
                     <br/>
+                    <Link to="/Home" style={{textDecoration:"none"}}>
                     <h1 style={{fontFamily: "Pacifico", fontSize: "35pt", color: "black", position: "relative", top: "2vh", right: "43vw"}}>Seedly</h1>
+                    </Link>
                 </div>
                 <div className="Navbar">
                     <Link to="/MyPlants" style={{textDecoration:"none"}}>
