@@ -1,8 +1,31 @@
 import React, { Component } from 'react'
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Switch, Link} from 'react-router-dom';
+import axios from 'axios';
+
+const BASE_URL = 'https://trefle.io/api/'
+const TOKEN = process.env.REACT_APP_API_KEY
 
 class Explore extends Component {
+    constructor(props) {
+        super(props)
+        
+        this.state= {
+            plantInfo: []
+        }
+    }
+
+    async explorePlants() {
+        try {
+            const res = await axios.get(BASE_URL + 'v1/plants?token={TOKEN}&filter_not[description]');
+            console.log(res.data);
+            this.setState({plantInfo: res.data});
+        } catch(err) {
+            console.error(err.message);
+        }
+    }
+
+    
     render() {
         return (
             <div className="ExplorePage">
