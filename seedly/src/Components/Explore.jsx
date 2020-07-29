@@ -4,8 +4,31 @@ import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
 import ExplorePlants from './ExplorePlants';
 
+const BASE_URL = 'https://trefle.io/api/v1/'
+const TOKEN = 'PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk'
+
 
 class Explore extends Component {
+    constructor(props) {
+        super(props)
+        this.state= {
+            info: []
+        }
+    }
+
+    async explorePlants() {
+                try {
+                    const res = await axios.get(BASE_URL + 'plants?token=' + TOKEN + '&filter_not[description]');
+                    console.log(res.data);
+                    this.setState({plantInfo: res.data.results});
+                } catch(err) {
+                    console.error(err.message);
+                }
+            }
+        
+            componentDidMount() {
+                this.explorePlants();
+            }
 
     // Below goes inside Results component (replace what needs to be replaced)
     // {
@@ -83,7 +106,17 @@ class Explore extends Component {
                 <div className="ResultsHeading">
                     <h3>Results</h3>
                 </div>
-                <ExplorePlants />
+                {
+                    this.state.info.map(plant => {
+                        console.log(plant);
+                        return(
+                            <div>
+                                <h4 style={{color: "black", fontFamily: "Pacifico", fontSize:"10pt"}}>Name: {plant.common_name}</h4>
+                                <img src={plant.image_url} alt="Plant" />
+                            </div>
+                        )
+                    })
+                }
             </div>
         )
     }
