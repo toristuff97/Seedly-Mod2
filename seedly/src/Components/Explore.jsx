@@ -79,32 +79,33 @@ class Explore extends Component {
 
                 <div className="Filter">
                     <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Vegetables</button> <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Fruits</button>
+                    <h3 style={{fontFamily: "SignPainter", fontSize: "25pt", color: "#000000"}}>Filter:</h3>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Vegetables</button> <br/>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Fruits</button>
                     <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Herbs</button>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Herbs</button>
                     <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Flowers</button>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Flowers</button>
                     <br/>
-                    <h3 style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000"}}>Sort By:</h3>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>A-Z</button>
+                    <h3 style={{fontFamily: "SignPainter", fontSize: "25pt", color: "#000000"}}>Sort By:</h3>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>A-Z</button>
                     <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Z-A</button>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Z-A</button>
                     <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Planting Season</button>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Planting Season</button>
                     <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Harvest Season</button>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Harvest Season</button>
                     <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Time to Harvest</button>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Time to Harvest</button>
                     <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Average Yield</button>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Average Yield</button>
                     <br/>
-                    <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Space Required</button>
+                    <button style={{fontFamily: "SignPainter", fontSize: "20pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Space Required</button>
                     <br/> <br/>
                 </div>
 
                 <div className="ResultsHeading">
-                    <h3>Results</h3>
+                    <h3 style={{color: "black", fontFamily: "SignPainter", fontSize:"25pt"}}>Results</h3>
                 </div>
                 {
                     this.state.info.map(plant => {
@@ -112,7 +113,7 @@ class Explore extends Component {
                         console.log(plant.common_name);
                         return(
                             <div>
-                                <h4 style={{color: "black", fontFamily: "Pacifico", fontSize:"10pt"}}>Name: {plant.common_name}</h4>
+                                <h4 style={{color: "black", fontFamily: "SignPainter", fontSize:"15pt"}}>Name: {plant.common_name}</h4>
                                 <img src={plant.image_url} style={{width: "5vw", height: "10vh"}} alt="Plant" />
                             </div>
                         )
