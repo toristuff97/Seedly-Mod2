@@ -48,10 +48,10 @@
   flex-direction: row;
   position: relative;
   left: 70vw;
-  bottom: 14vh;
+  bottom: 12vh;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~ HOME PAGE STYLING ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~ EXPLORE STYLING ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 .ExplorePage {
   background-color: #21D9A8;
@@ -65,6 +65,13 @@
   margin-right: 5vw;
   width: 15vw;
 }
+
+.Results {
+  border: white solid;
+}
+
+
+
 
 @keyframes App-logo-spin {
   from {

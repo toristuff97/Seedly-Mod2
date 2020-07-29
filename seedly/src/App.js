@@ -7,6 +7,7 @@ import Home from './Components/Home'
 import NewPlant from './Components/NewPlant'
 import Explore from './Components/Explore'
 import MyPlants from './Components/MyPlants'
+import ExplorePlants from './Components/ExplorePlants'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           </Route>
           <Route path="/Explore">
             <Explore />
+            {/* <ExplorePlants /> */}
           </Route>
           <Route path="/MyPlants">
             <MyPlants />

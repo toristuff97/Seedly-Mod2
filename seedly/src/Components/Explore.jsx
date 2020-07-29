@@ -2,32 +2,10 @@ import React, { Component } from 'react'
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
+import ExplorePlants from './ExplorePlants';
 
-const BASE_URL = 'https://trefle.io/api/v1/'
-const TOKEN = process.env.REACT_APP_API_KEY
 
 class Explore extends Component {
-    constructor(props) {
-        super(props)
-        
-        this.state= {
-            plantInfo: []
-        }
-    }
-
-    async explorePlants() {
-        try {
-            const res = await axios.get(BASE_URL + 'plants?token={TOKEN}&filter_not[description]');
-            console.log(res.data);
-            this.setState({plantInfo: res.data});
-        } catch(err) {
-            console.error(err.message);
-        }
-    }
-
-    componentDidMount() {
-        this.explorePlants();
-    }
 
     // Below goes inside Results component (replace what needs to be replaced)
     // {
@@ -59,6 +37,7 @@ class Explore extends Component {
     render() {
         return (
             <div className="ExplorePage">
+                
                 <div className="Logo">
                     <br/>
                     <h1 style={{fontFamily: "Pacifico", fontSize: "35pt", color: "black", position: "relative", top: "2vh", right: "43vw"}}>Seedly</h1>
@@ -74,6 +53,7 @@ class Explore extends Component {
                     <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Calendar&nbsp; &nbsp;</h2>
                     </Link>
                 </div>
+
                 <div className="Filter">
                     <br/>
                     <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Vegetables</button> <br/>
@@ -99,15 +79,19 @@ class Explore extends Component {
                     <button style={{fontFamily: "Pacifico", fontSize: "15pt", color: "#000000", border: "none", backgroundColor: "#16C798"}}>Space Required</button>
                     <br/> <br/>
                 </div>
-                <div className="Results">
+
+                <div className="ResultsHeading">
                     <h3>Results</h3>
                 </div>
-
+                <ExplorePlants />
             </div>
         )
     }
 }
-export default Explore
+
+export default Explore;
+
+
 // Filtering by plants that have growth_habit included and no edible parts:
 // https://trefle.io/api/v1/plants?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk&filter[growth_habit]&&filter_not[edible_part]
 
