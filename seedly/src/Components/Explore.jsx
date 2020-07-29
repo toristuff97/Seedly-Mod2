@@ -97,6 +97,9 @@ class Explore extends Component {
                         )
                     })
                 }
+                <div className="Pages">
+
+                </div>
                 </div>
             </div>
         )
@@ -111,6 +114,11 @@ export default Explore;
 
 // Showing ALLLLLL of the info for a specific plant:
 // https://trefle.io/api/v1/species/cirsium-oleraceum?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk
+
+// To go to a different page, add however many ampersands you need and page=number
+// Ex: 
+// https://trefle.io/api/v1/plants?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk&filter_not[description]&&page=2
+
 
 // I THINK I have to do (BASE_URL + 'plants/token={TOKEN}&filter[growth_habit]&&filter_not[row_spacing]') and then do the map thing with each specific plant result with the description, growth habit, common name, etc. 
 
