@@ -66,8 +66,21 @@
   width: 15vw;
 }
 
+.ResultsHeading {
+  position: relative;
+  bottom: 70vh;
+  left: 8vw;
+}
+
 .Results {
   border: white solid;
+  width: 75vw;
+  position: relative;
+  bottom: 72vh;
+  left: 20vw;
+  display: flex;
+  flex-wrap: wrap;
+  
 }
 
 

@@ -107,6 +107,7 @@ class Explore extends Component {
                 <div className="ResultsHeading">
                     <h3 style={{color: "black", fontFamily: "SignPainter", fontSize:"25pt"}}>Results</h3>
                 </div>
+                <div className="Results">
                 {
                     this.state.info.map(plant => {
                         console.log(plant);
@@ -119,6 +120,7 @@ class Explore extends Component {
                         )
                     })
                 }
+                </div>
             </div>
         )
     }
