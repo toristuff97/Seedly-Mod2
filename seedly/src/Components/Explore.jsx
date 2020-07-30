@@ -3,6 +3,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
 import ExplorePlants from './ExplorePlants';
+import ReactPaginate from 'react-paginate';
 
 
 const BASE_URL = 'https://trefle.io/api/v1/'
@@ -14,7 +15,9 @@ class Explore extends Component {
         super(props)
         this.state= {
             info: [],
-            pages: []
+            offset: 0,
+            perPage: 30,
+            currentPage: 0
         }
     }
 
