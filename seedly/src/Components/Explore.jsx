@@ -20,7 +20,7 @@ class Explore extends Component {
 
     async explorePlants() {
                 try {
-                    const res = await axios.get(BASE_URL + 'plants?token=' + TOKEN + '&filter_not[description]');
+                    const res = await axios.get(BASE_URL + 'plants?token=' + TOKEN + '&filter_not[description]&&filter_not[image_url]');
                     console.log(res.data);
                     this.setState({info: res.data.data});
                     this.setState ({pages: ((res.data.meta.total)/30)})
