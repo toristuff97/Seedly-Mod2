@@ -24,6 +24,7 @@ class Explore extends Component {
                     console.log(res.data);
                     this.setState({info: res.data.data});
                     this.setState ({pages: ((res.data.meta.total)/30)})
+                    // console.log(this.state.pages)
                 } catch(err) {
                     console.error(err.message);
                 }
@@ -95,6 +96,7 @@ class Explore extends Component {
                                 <p style={{color: "black", fontFamily: "SignPainter", fontSize:"20pt"}}>Name:</p>
                                 <p style={{color: "black", fontFamily: "SignPainter", fontSize:"20pt"}}>{plant.common_name}</p>
                                 <img src={plant.image_url} style={{width: "5vw", height: "10vh"}} alt="Plant" />
+                                <p style={{color: "black", fontFamily: "SignPainter", fontSize:"20pt"}}>{plant.description}</p>
                             </div>
                         )
                     })

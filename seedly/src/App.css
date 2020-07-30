@@ -90,6 +90,16 @@
   border: #21D9A8 solid;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ NEW PLANT STYLING ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.NewPlantPage {
+  background-color: #21D9A8;
+  height: 2000px;
+  width: 100vw;
+}
+
+.Search {
+  border: none;
+}
 
 
 @keyframes App-logo-spin {
