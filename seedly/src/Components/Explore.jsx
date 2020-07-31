@@ -25,21 +25,21 @@ export default class Explore extends Component {
                 try {
                     const res = await axios.get(BASE_URL + 'plants?token=' + TOKEN + '&filter_not[description]&&filter_not[image_url]');
 
-                    const slice = res.slice(this.state.offset, this.state.offset + this.state.perPage);
+                    // const slice = res.slice(this.state.offset, this.state.offset + this.state.perPage);
 
                     console.log(res.data);
 
                     this.setState({info: res.data.data});
 
-                    const postData = slice.map(pd => <React.Fragment>
-                        <p>{pd.title}</p>
-                        <img src={pd.thumbnailUrl} alt=""/>
-                    </React.Fragment>);
+                    // const postData = slice.map(pd => <React.Fragment>
+                    //     <p>{pd.title}</p>
+                    //     <img src={pd.thumbnailUrl} alt=""/>
+                    // </React.Fragment>);
 
-                    this.setState({
-                        pageCount: Math.ceil(res.length / this.state.perPage),
-                        postData
-                    })
+                    // this.setState({
+                    //     pageCount: Math.ceil(res.length / this.state.perPage),
+                    //     postData
+                    // })
                 } catch(err) {
                     console.error(err.message);
                 }
