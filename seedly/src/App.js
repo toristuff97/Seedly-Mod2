@@ -6,7 +6,7 @@ import Landing from './Components/Landing'
 import Home from './Components/Home'
 import NewPlant from './Components/NewPlant'
 import Explore from './Components/Explore'
-import MyPlants from './Components/MyPlants'
+// import MyPlants from './Components/MyPlants'
 // import ExplorePlants from './Components/ExplorePlants'
 
 function App() {
@@ -27,9 +27,9 @@ function App() {
             <Explore />
             {/* <ExplorePlants /> */}
           </Route>
-          <Route path="/MyPlants">
+          {/* <Route path="/MyPlants">
             <MyPlants />
-          </Route>
+          </Route> */}
         </div>
         </Switch>
     </Router>

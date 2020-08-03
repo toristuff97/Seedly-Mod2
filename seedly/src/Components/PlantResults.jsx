@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class MyPlants extends Component {
+class PlantResults extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            savedPlants: [{}]
-        }
-    }
+    // constructor(props) {
+    //     super(props)
+    //     this.state = {
+    //         savedPlants: [{}]
+    //     }
+    // }
 
     render() {
         return (
@@ -18,6 +18,6 @@ class MyPlants extends Component {
     }
 }
 
-export default MyPlants
+export default PlantResults
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DELETE THIS COMPONENT IF POSSIBLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

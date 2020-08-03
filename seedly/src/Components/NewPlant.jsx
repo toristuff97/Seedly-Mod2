@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
-import Search from './Search';
+// import Search from './Search';
+import PlantResults from './PlantResults';
 
 const BASE_URL = 'https://trefle.io/api/v1/plants/search?token='
 const TOKEN = process.env.REACT_APP_API_KEY
@@ -31,8 +32,9 @@ export default class NewPlant extends Component {
     get renderPlants() {
         let info = <h1>No results :(</h1>;
             if (this.state.info) {
-                
+                info = <PlantResults list={this.state.info} />
             }
+        return info;
     }
 
 
@@ -59,6 +61,7 @@ export default class NewPlant extends Component {
                     <br/>
                     <h3 style={{fontFamily: "Pacifico", fontSize: "30pt", color: "black"}}>What would you like to grow? <br/>(Common Name only please)</h3>
                 <input className="Search" value={this.state.value} onChange={e => this.inputHandler(e)} style={{height: "5vh", width: "30vw", textAlign: "center"}}></input>
+                {this.renderPlants}
             </div>
         )
     }
