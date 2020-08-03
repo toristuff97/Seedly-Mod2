@@ -23,7 +23,17 @@ export default class NewPlant extends Component {
         this.setState({info})
     };
 
+    inputHandler = async e => {
+        this.search(e.target.value);
+        this.setState({plantSearch: e.target.value});
+    }
 
+    get renderPlants() {
+        let info = <h1>No results :(</h1>;
+            if (this.state.info) {
+                
+            }
+    }
 
 
     render() {
