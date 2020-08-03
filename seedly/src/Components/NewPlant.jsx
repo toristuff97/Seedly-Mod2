@@ -21,7 +21,8 @@ export default class NewPlant extends Component {
     search = async input => {
         const res = await axios(`${BASE_URL}${TOKEN}&q=${input}`);
         const info = await res.data.data;
-        this.setState({info})
+        console.log(res.data.data);
+        this.setState({info: res.data.data})
     };
 
     inputHandler = async e => {
@@ -61,7 +62,7 @@ export default class NewPlant extends Component {
                     <br/>
                     <h3 style={{fontFamily: "Pacifico", fontSize: "30pt", color: "black"}}>What would you like to grow? <br/>(Common Name only please)</h3>
                 <input className="Search" value={this.state.value} onChange={e => this.inputHandler(e)} style={{height: "5vh", width: "30vw", textAlign: "center"}}></input>
-                {this.renderPlants}
+                {/* {this.renderPlants} */}
             </div>
         )
     }

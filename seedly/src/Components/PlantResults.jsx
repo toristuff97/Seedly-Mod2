@@ -1,21 +1,18 @@
 import React, { Component } from 'react'
+import Result from './Result'
 
-class PlantResults extends Component {
 
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
-    //         savedPlants: [{}]
-    //     }
-    // }
+function PlantResults(props) {
 
-    render() {
-        return (
-            <div className="UserPlants">
-                
-            </div>
-        )
-    }
+    let plants = props.info.map((plant) => {
+        console.log(plant);
+        return <Result name={plant.common_name} image={plant.image_url} description={plant.description} />
+    })
+    return (
+        <div>
+            {plants}
+        </div>
+    )
 }
 
 export default PlantResults

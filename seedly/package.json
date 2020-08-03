@@ -15,7 +15,8 @@
     "react-router-native": "^5.2.0",
     "react-router-transition": "^2.0.0",
     "react-scripts": "3.4.1",
-    "react-transition-group": "^4.4.1"
+    "react-transition-group": "^4.4.1",
+    "reactstrap": "^8.5.1"
   },
   "scripts": {
     "start": "react-scripts start",
