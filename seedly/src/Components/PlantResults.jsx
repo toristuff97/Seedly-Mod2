@@ -4,13 +4,13 @@ import Result from './Result'
 
 function PlantResults(props) {
 
-    let plants = props.info.map((plant) => {
-        console.log(plant);
-        return <Result name={plant.common_name} image={plant.image_url} description={plant.description} />
-    })
+    // let plants = props.info.map((plant) => {
+    //     console.log(plant);
+    //     return <Result name={plant.common_name} image={plant.image_url} description={plant.description} />
+    // })
     return (
         <div>
-            {plants}
+            {/* {plants} */}
         </div>
     )
 }

@@ -3,6 +3,7 @@ import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
 // import Search from './Search';
 import PlantResults from './PlantResults';
+import Result from './Result'
 
 const BASE_URL = 'https://trefle.io/api/v1/plants/search?token='
 const TOKEN = process.env.REACT_APP_API_KEY
@@ -21,8 +22,9 @@ export default class NewPlant extends Component {
     search = async input => {
         const res = await axios(`${BASE_URL}${TOKEN}&q=${input}`);
         const info = await res.data.data;
-        console.log(res.data.data);
+        // console.log(res.data.data);
         this.setState({info: res.data.data})
+        console.log(info);
     };
 
     inputHandler = async e => {
@@ -33,7 +35,7 @@ export default class NewPlant extends Component {
     get renderPlants() {
         let info = <h1>No results :(</h1>;
             if (this.state.info) {
-                info = <PlantResults list={this.state.info} />
+                info = <Result list={this.state.info} />
             }
         return info;
     }
@@ -62,7 +64,7 @@ export default class NewPlant extends Component {
                     <br/>
                     <h3 style={{fontFamily: "Pacifico", fontSize: "30pt", color: "black"}}>What would you like to grow? <br/>(Common Name only please)</h3>
                 <input className="Search" value={this.state.value} onChange={e => this.inputHandler(e)} style={{height: "5vh", width: "30vw", textAlign: "center"}}></input>
-                {/* {this.renderPlants} */}
+                {this.renderPlants}
             </div>
         )
     }
