@@ -3,7 +3,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
 import ExplorePlants from './ExplorePlants';
-import ReactPaginate from 'react-paginate';
+import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
 
 const BASE_URL = 'https://trefle.io/api/v1/'
