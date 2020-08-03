@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Route, Switch, Link} from 'react-router-dom';
-import { Card, CardText, CardBody, CardLink, CardTitle, CardImg, CardSubtitle } from 'reactstrap';
+import { Card, CardText, CardBody, CardLink, CardTitle, CardImg, CardSubtitle, ListGroup } from 'reactstrap';
 import axios from 'axios';
 // import Search from './Search';
 import PlantResults from './PlantResults';
@@ -72,10 +72,10 @@ export default class NewPlant extends Component {
                         return(
                             <div className="Result">
                                 <Card>
-                                    <CardImg top src={result.image_url}></CardImg>
+                                    <CardImg top src={result.image_url} style={{width: "100px", height: "100px"}}></CardImg>
                                     <CardTitle>{result.common_name}</CardTitle>
                                     <CardText>{result.description}</CardText>
-                                </Card>
+                                </Card>  
                             </div>
                         )
                     })
