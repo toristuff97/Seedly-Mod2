@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import {Route, Switch, Link} from 'react-router-dom';
+import { Card, CardText, CardBody, CardLink, CardTitle, CardImg, CardSubtitle } from 'reactstrap';
 import axios from 'axios';
 // import Search from './Search';
 import PlantResults from './PlantResults';
@@ -64,7 +65,21 @@ export default class NewPlant extends Component {
                     <br/>
                     <h3 style={{fontFamily: "Pacifico", fontSize: "30pt", color: "black"}}>What would you like to grow? <br/>(Common Name only please)</h3>
                 <input className="Search" value={this.state.value} onChange={e => this.inputHandler(e)} style={{height: "5vh", width: "30vw", textAlign: "center"}}></input>
-                {this.renderPlants}
+                {
+                    this.state.info.map(result => {
+                        console.log(result);
+                        console.log(result.common_name);
+                        return(
+                            <div className="Result">
+                                <Card>
+                                    <CardImg top src={result.image_url}></CardImg>
+                                    <CardTitle>{result.common_name}</CardTitle>
+                                    <CardText>{result.description}</CardText>
+                                </Card>
+                            </div>
+                        )
+                    })
+                }
             </div>
         )
     }
