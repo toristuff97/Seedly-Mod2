@@ -58,7 +58,7 @@ export default class NewPlant extends Component {
                     </div>
                     <br/>
                     <h3 style={{fontFamily: "Pacifico", fontSize: "30pt", color: "black"}}>What would you like to grow? <br/>(Common Name only please)</h3>
-                <input className="Search" type="text" style={{height: "5vh", width: "30vw", textAlign: "center"}}></input>
+                <input className="Search" value={this.state.value} onChange={e => this.inputHandler(e)} style={{height: "5vh", width: "30vw", textAlign: "center"}}></input>
             </div>
         )
     }
