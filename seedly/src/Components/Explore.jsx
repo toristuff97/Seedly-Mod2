@@ -139,7 +139,7 @@ export default class Explore extends Component {
 // https://trefle.io/api/v1/plants?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk&filter_not[description]&&page=2
 
 // PAGINATION SOURCE
-// https://medium.com/how-to-react/create-pagination-in-reactjs-e4326c1b9855
+// https://medium.com/@imranhsayed/live-search-with-react-instant-search-pagination-6acd476af756
 
 
 // I THINK I have to do (BASE_URL + 'plants/token={TOKEN}&filter[growth_habit]&&filter_not[row_spacing]') and then do the map thing with each specific plant result with the description, growth habit, common name, etc. 
