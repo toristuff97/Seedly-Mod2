@@ -1,9 +1,31 @@
 import React, { Component } from 'react'
 import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
+import Search from './Search';
+
+const BASE_URL = 'https://trefle.io/api/v1/plants/search?token='
+const TOKEN = process.env.REACT_APP_API_KEY
 
 
 export default class NewPlant extends Component {
+
+    constructor() {
+        super() 
+        this.state = {
+            info: [],
+            plantSearch: ''
+        }
+    }
+
+    search = async input => {
+        const res = await axios(`${BASE_URL}${TOKEN}&q=${input}`);
+        const info = await res.data.data;
+        this.setState({info})
+    };
+
+
+
+
     render() {
         return (
             <div className="NewPlantPage">
@@ -31,3 +53,6 @@ export default class NewPlant extends Component {
         )
     }
 }
+
+
+// SEARCH FUNCTION SOURCE: https://www.digitalocean.com/community/tutorials/react-live-search-with-axios

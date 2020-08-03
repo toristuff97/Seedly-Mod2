@@ -19,3 +19,5 @@ class MyPlants extends Component {
 }
 
 export default MyPlants
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DELETE THIS COMPONENT IF POSSIBLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
