@@ -50,6 +50,20 @@ export default class Explore extends Component {
                 this.explorePlants();
             }
 
+            forwardPage = () => {
+                pageNumber++;
+                // window.location.reload(true);
+            }
+
+            backPage = () => {
+                pageNumber--;
+                // window.location.reload(true);
+            }
+
+            refreshPage = () => {
+                window.location.reload();
+            }
+
     render() {
         return (
             <div className="ExplorePage">
@@ -118,7 +132,14 @@ export default class Explore extends Component {
                     })
                 }
                 <div className="Pages">
-                    
+                    <Pagination>
+                        <PaginationItem>
+                            <PaginationLink previous onClick={this.backPage, this.explorePlants}  />
+                        </PaginationItem>
+                        <PaginationItem>
+                            <PaginationLink next onClick={this.forwardPage, this.explorePlants} />
+                        </PaginationItem>
+                    </Pagination>
                 </div>
                 </div>
             </div>
