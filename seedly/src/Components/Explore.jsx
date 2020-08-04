@@ -8,7 +8,6 @@ import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
 const BASE_URL = 'https://trefle.io/api/v1/'
 const TOKEN = process.env.REACT_APP_API_KEY
-let pageNumber = 1;
 
 
 export default class Explore extends Component {
@@ -16,53 +15,56 @@ export default class Explore extends Component {
         super(props)
         this.state= {
             info: [],
-            offset: 0,
+            pageNumber: 1,
             perPage: 30,
             currentPage: 0
         }
     }
 
-    async explorePlants() {
-                try {
-                    const res = await axios.get(BASE_URL + 'plants?token=' + TOKEN + '&filter_not[description]&&filter_not[image_url]&&&page=' + pageNumber);
-
-                    // const slice = res.slice(this.state.offset, this.state.offset + this.state.perPage);
-
-                    console.log(res.data);
-
-                    this.setState({info: res.data.data});
-
-                    // const postData = slice.map(pd => <React.Fragment>
-                    //     <p>{pd.title}</p>
-                    //     <img src={pd.thumbnailUrl} alt=""/>
-                    // </React.Fragment>);
-
-                    // this.setState({
-                    //     pageCount: Math.ceil(res.length / this.state.perPage),
-                    //     postData
-                    // })
-                } catch(err) {
-                    console.error(err.message);
-                }
-            }
-        
             componentDidMount() {
                 this.explorePlants();
             }
 
             forwardPage = () => {
-                pageNumber++;
+                this.setState({pageNumber: 2});
+                console.log(this.pageNumber);
                 // window.location.reload(true);
             }
 
             backPage = () => {
-                pageNumber--;
+                this.setState({pageNumber: 1});
+                console.log(this.pageNumber);
                 // window.location.reload(true);
             }
 
             refreshPage = () => {
                 window.location.reload();
             }
+
+    async explorePlants() {
+        try {
+            const res = await axios.get(BASE_URL + 'plants?token=' + TOKEN + '&filter_not[description]&&filter_not[image_url]&&&page=' + this.state.pageNumber);
+
+            // const slice = res.slice(this.state.offset, this.state.offset + this.state.perPage);
+
+            console.log(res.data);
+
+            this.setState({info: res.data.data});
+
+            // const postData = slice.map(pd => <React.Fragment>
+            //     <p>{pd.title}</p>
+            //     <img src={pd.thumbnailUrl} alt=""/>
+            // </React.Fragment>);
+
+            // this.setState({
+            //     pageCount: Math.ceil(res.length / this.state.perPage),
+            //     postData
+            // })
+        } catch(err) {
+            console.error(err.message);
+        }
+    }
+        
 
     render() {
         return (
