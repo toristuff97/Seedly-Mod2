@@ -4,11 +4,13 @@ import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
-
+// This is the base url and env token for the api
 const BASE_URL = 'https://trefle.io/api/v1/'
 const TOKEN = process.env.REACT_APP_API_KEY
 
+// Explore page Component
 export default class Explore extends Component {
+    // Setting the default state with an empty info array and page numbers which i did not use
     constructor() {
         super()
         this.state= {
@@ -17,11 +19,7 @@ export default class Explore extends Component {
             perPage: 30
         }
     }
-
-    componentDidMount() {
-        this.explorePlants();
-    }
-
+    // An async function to get plants from the first page of the API that include descriptions and images
     async explorePlants() {
         try {
             const res = await axios.get(`${BASE_URL}plants?token=${TOKEN}&filter_not[description]&&filter_not[image_url]`);
@@ -30,6 +28,10 @@ export default class Explore extends Component {
         } catch(err) {
             console.error(err.message);
         }
+    }
+
+    componentDidMount() {
+        this.explorePlants();
     }
         
     render() {
