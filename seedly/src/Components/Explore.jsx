@@ -29,7 +29,7 @@ export default class Explore extends Component {
             console.error(err.message);
         }
     }
-
+    // This loads the results when the page loads
     componentDidMount() {
         this.explorePlants();
     }
@@ -37,14 +37,14 @@ export default class Explore extends Component {
     render() {
         return (
             <div className="explore-page">
-
+                {/* This is the logo with a link to the homepage */}
                 <div className="Logo">
                     <br/>
                     <Link to="/Home" style={{textDecoration:"none"}}>
                     <h1 style={{fontFamily: "Pacifico", fontSize: "35pt", color: "black", position: "relative", top: "2vh", right: "43vw"}}>Seedly</h1>
                     </Link>
                 </div>
-
+                {/* This is the navbar with links to New Plant and Explore page */}
                 <div className="Navbar">
                     <Link to="/NewPlant" style={{textDecoration:"none"}}>
                     <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>New Plant&nbsp; &nbsp;</h2>
@@ -53,7 +53,7 @@ export default class Explore extends Component {
                     <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Explore&nbsp; &nbsp;</h2>
                     </Link>
                 </div>
-
+                {/* These buttons were SUPPOSED to filter the results but I didn't have time to learn how to do that. */}
                 <div className="Filter">
                     <br/>
                     <h3 style={{fontFamily: "SignPainter", fontSize: "25pt", color: "#000000"}}>Filter:</h3>
@@ -85,6 +85,7 @@ export default class Explore extends Component {
                     <h3 style={{color: "black", fontFamily: "SignPainter", fontSize:"25pt"}}>Results</h3>
                 </div>
                 <div className="Results">
+                    {/* Mapping the array of data from the API results and giving each plant its own little container box with its picture and common name */}
                 {
                     this.state.info.map(plant => {
                         // console.log(plant);
