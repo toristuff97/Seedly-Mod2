@@ -8,11 +8,13 @@ import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
 const BASE_URL = 'https://trefle.io/api/v1/'
 const TOKEN = process.env.REACT_APP_API_KEY
+const ORIGINAL = `${BASE_URL}plants?token=${TOKEN}&filter_not[description]&&filter_not[image_url]`
+const FRUITS = `${BASE_URL}plants?token=${TOKEN}&filter_not[description]&&filter_not[image_url]&&&filter[genus]=fragaria`
 
 
 export default class Explore extends Component {
-    constructor(props) {
-        super(props)
+    constructor() {
+        super()
         this.state= {
             info: [],
             pageNumber: 1,
@@ -43,7 +45,7 @@ export default class Explore extends Component {
 
     async explorePlants() {
         try {
-            const res = await axios.get(BASE_URL + 'plants?token=' + TOKEN + '&filter_not[description]&&filter_not[image_url]&&&page=' + this.state.pageNumber);
+            const res = await axios.get(ORIGINAL);
 
             // const slice = res.slice(this.state.offset, this.state.offset + this.state.perPage);
 
