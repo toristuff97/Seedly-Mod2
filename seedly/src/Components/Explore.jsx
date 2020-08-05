@@ -9,7 +9,7 @@ import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 const BASE_URL = 'https://trefle.io/api/v1/'
 const TOKEN = process.env.REACT_APP_API_KEY
 const ORIGINAL = `${BASE_URL}plants?token=${TOKEN}&filter_not[description]&&filter_not[image_url]`
-const FRUITS = `${BASE_URL}plants?token=${TOKEN}&filter_not[description]&&filter_not[image_url]&&&filter[genus]=fragaria`
+// const FRUITS = `${BASE_URL}plants?token=${TOKEN}&filter_not[description]&&filter_not[image_url]&&&filter[genus]=fragaria`
 
 
 export default class Explore extends Component {
@@ -79,14 +79,11 @@ export default class Explore extends Component {
                     </Link>
                 </div>
                 <div className="Navbar">
-                    <Link to="/MyPlants" style={{textDecoration:"none"}}>
-                    <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>My Plants&nbsp; &nbsp;</h2>
+                    <Link to="/NewPlant" style={{textDecoration:"none"}}>
+                    <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>New Plant&nbsp; &nbsp;</h2>
                     </Link>
-                    <Link to="/MyPlots" style={{textDecoration:"none"}}>
-                    <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>My Plots&nbsp; &nbsp;</h2>
-                    </Link>
-                    <Link to="/Calendar" style={{textDecoration:"none"}}>
-                    <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Calendar&nbsp; &nbsp;</h2>
+                    <Link to="/Explore" style={{textDecoration:"none"}}>
+                    <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Explore&nbsp; &nbsp;</h2>
                     </Link>
                 </div>
 
@@ -136,14 +133,14 @@ export default class Explore extends Component {
                     })
                 }
                 <div className="Pages">
-                    <Pagination>
+                    {/* <Pagination>
                         <PaginationItem>
                             <PaginationLink previous onClick={this.backPage, this.explorePlants}  />
                         </PaginationItem>
                         <PaginationItem>
                             <PaginationLink next onClick={this.forwardPage, this.explorePlants} />
                         </PaginationItem>
-                    </Pagination>
+                    </Pagination> */}
                 </div>
                 </div>
             </div>
