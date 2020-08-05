@@ -34,7 +34,7 @@ export default class Explore extends Component {
         
     render() {
         return (
-            <div className="ExplorePage">
+            <div className="explore-page">
 
                 <div className="Logo">
                     <br/>
@@ -79,7 +79,7 @@ export default class Explore extends Component {
                     <br/> <br/>
                 </div>
 
-                <div className="ResultsHeading">
+                <div className="results-heading">
                     <h3 style={{color: "black", fontFamily: "SignPainter", fontSize:"25pt"}}>Results</h3>
                 </div>
                 <div className="Results">
