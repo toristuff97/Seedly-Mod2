@@ -118,47 +118,5 @@ export default class Explore extends Component {
     }
 }
 
-// export default Explore;
-
-
-// Filtering by plants that have growth_habit included and no edible parts:
-// https://trefle.io/api/v1/plants?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk&filter[growth_habit]&&filter_not[edible_part]
-
-// Showing ALLLLLL of the info for a specific plant:
-// https://trefle.io/api/v1/species/cirsium-oleraceum?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk
-
-// To go to a different page, add however many ampersands you need and page=number
-// Ex: 
-// https://trefle.io/api/v1/plants?token=PqNJtAHsO_n4nlOY8CbOKiBRAyW7CuSaO4PMbCOLhtk&filter_not[description]&&page=2
-
 // PAGINATION SOURCE
 // https://medium.com/@imranhsayed/live-search-with-react-instant-search-pagination-6acd476af756
-
-
-// I THINK I have to do (BASE_URL + 'plants/token={TOKEN}&filter[growth_habit]&&filter_not[row_spacing]') and then do the map thing with each specific plant result with the description, growth habit, common name, etc. 
-
-   // Below goes inside Results component (replace what needs to be replaced)
-    // {
-    //     this.state.info.map((index,id) => {
-    //         return (
-    //           <div className="theFriends" key={id}>
-    //             <h2>My first name is {index.firstname}.</h2>
-    //             <h2>My last name is {index.lastname}.</h2>
-    //             <h3>My email is {index.email}.</h3>
-    //           </div>
-    //         )
-    //       })}
-
-    // Another example of the above
-    // {
-    //     this.state.info.map(person => {
-    //         console.log(person);
-    //         return (
-    //             <div className="people">
-    //                 <h1>{person.name}</h1>
-    //                 <h2>They weigh {person.mass} kg.</h2>
-    //                 <h3>They are {person.height} cm tall.</h3>
-    //             </div>
-    //         )
-    //     })
-    // }
