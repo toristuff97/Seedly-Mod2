@@ -41,7 +41,7 @@ export default class NewPlant extends Component {
 
     render() {
         return (
-            <div className="NewPlantPage">
+            <div className="new-plant-page">
                 <br/>
                     <div className="Logo">
                         <Link to="/Home" style={{textDecoration: "none"}}>
