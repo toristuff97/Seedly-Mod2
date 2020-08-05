@@ -22,7 +22,7 @@ export default class NewPlant extends Component {
         const res = await axios(`${BASE_URL}${TOKEN}&q=${input}`);
         const info = await res.data.data;
         this.setState({info: res.data.data})
-        console.log(info);
+        // console.log(info);
     };
 
     inputHandler = async e => {
@@ -61,8 +61,8 @@ export default class NewPlant extends Component {
                 <input className="Search" value={this.state.value} onChange={e => this.inputHandler(e)} style={{height: "5vh", width: "30vw", textAlign: "center"}}></input>
                 {
                     this.state.info.map(result => {
-                        console.log(result);
-                        console.log(result.common_name);
+                        // console.log(result);
+                        // console.log(result.common_name);
                         return(
                             <div className="Result">
                                 <Card>
