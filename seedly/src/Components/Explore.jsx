@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Switch, Link} from 'react-router-dom';
 import axios from 'axios';
-import ExplorePlants from './ExplorePlants';
 import { Pagination, PaginationItem, PaginationLink } from 'reactstrap';
 
 
