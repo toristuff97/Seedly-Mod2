@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import {Route, Switch, Link} from 'react-router-dom';
 import { Card, CardText, CardBody, CardLink, CardTitle, CardImg, CardSubtitle, ListGroup } from 'reactstrap';
 import axios from 'axios';
-// import Search from './Search';
-import PlantResults from './PlantResults';
 import Result from './Result'
 
 const BASE_URL = 'https://trefle.io/api/v1/plants/search?token='
@@ -51,14 +49,11 @@ export default class NewPlant extends Component {
                         </Link>
                     </div>
                     <div className="Navbar">
-                        <Link to="/MyPlants" style={{textDecoration:"none"}}>
-                        <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>My Plants&nbsp; &nbsp;</h2>
+                        <Link to="/NewPlant" style={{textDecoration:"none"}}>
+                        <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>New Plant&nbsp; &nbsp;</h2>
                         </Link>
-                        <Link to="/MyPlots" style={{textDecoration:"none"}}>
-                        <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>My Plots&nbsp; &nbsp;</h2>
-                        </Link>
-                        <Link to="/Calendar" style={{textDecoration:"none"}}>
-                        <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Calendar&nbsp; &nbsp;</h2>
+                        <Link to="/Explore" style={{textDecoration:"none"}}>
+                        <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Explore&nbsp; &nbsp;</h2>
                         </Link>
                     </div>
                     <br/>
