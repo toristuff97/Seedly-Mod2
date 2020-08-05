@@ -25,7 +25,7 @@ export default class Explore extends Component {
     async explorePlants() {
         try {
             const res = await axios.get(`${BASE_URL}plants?token=${TOKEN}&filter_not[description]&&filter_not[image_url]`);
-            console.log(res.data);
+            // console.log(res.data);
             this.setState({info: res.data.data});
         } catch(err) {
             console.error(err.message);
@@ -85,8 +85,8 @@ export default class Explore extends Component {
                 <div className="Results">
                 {
                     this.state.info.map(plant => {
-                        console.log(plant);
-                        console.log(plant.common_name);
+                        // console.log(plant);
+                        // console.log(plant.common_name);
                         return(
                             <div className="EachPlant">
                                 <p style={{color: "black", fontFamily: "SignPainter", fontSize:"20pt"}}>Name:</p>
