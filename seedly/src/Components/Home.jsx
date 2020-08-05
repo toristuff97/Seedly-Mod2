@@ -6,15 +6,18 @@ export default class Home extends Component {
     render() {
         return (
             <Router>
-                <div className="Homepage">
+                <div className="home-page">
                     <br/>
                     <div className="Logo">
                         <h1 style={{fontFamily: "Pacifico", fontSize: "35pt", color: "black", position: "relative", right: "42vw"}}>Seedly</h1>
                     </div>
                     <div className="Navbar">
-                        <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>My Plants&nbsp; &nbsp;</h2>
-                        <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>My Plots&nbsp; &nbsp;</h2>
-                        <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Calendar&nbsp; &nbsp;</h2>
+                        <Link to="/NewPlant" style={{textDecoration: "none"}}>
+                            <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>New Plant&nbsp; &nbsp;</h2>
+                        </Link>
+                        <Link to="/Explore" style={{textDecoration: "none"}}>
+                            <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Explore&nbsp; &nbsp;</h2>
+                        </Link>
                     </div>
                     <div className="Prompt">
                         <h2 style={{fontFamily: "Pacifico", fontSize: "30pt", color: "#000000"}}>What do you want to grow?</h2>
