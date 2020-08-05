@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {BrowserRouter as Router} from 'react-router-dom';
 import {Route, Switch, Link} from 'react-router-dom';
-
+// This is the Homepage component, it has links to the NewPlant and Explore components, using React Router
 export default class Home extends Component {
     render() {
         return (
@@ -19,6 +19,7 @@ export default class Home extends Component {
                             <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>Explore&nbsp; &nbsp;</h2>
                         </Link>
                     </div>
+                    {/* Buttons that also link to NewPlant and Explore */}
                     <div className="Prompt">
                         <h2 style={{fontFamily: "Pacifico", fontSize: "30pt", color: "#000000"}}>What do you want to grow?</h2>
                         <Link to="/NewPlant">
