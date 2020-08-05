@@ -15,30 +15,27 @@ export default class Explore extends Component {
         this.state= {
             info: [],
             pageNumber: 1,
-            perPage: 30,
-            currentPage: 0
+            perPage: 30
         }
     }
 
-            componentDidMount() {
-                this.explorePlants();
-            }
+    componentDidMount() {
+        this.explorePlants();
+    }
 
-            forwardPage = () => {
-                this.setState({pageNumber: 2});
-                console.log(this.pageNumber);
-                // window.location.reload(true);
-            }
+    forwardPage = () => {
+        this.setState({pageNumber: 2});
+        console.log(this.pageNumber);
+    }
 
-            backPage = () => {
-                this.setState({pageNumber: 1});
-                console.log(this.pageNumber);
-                // window.location.reload(true);
-            }
+    backPage = () => {
+        this.setState({pageNumber: 1});
+        console.log(this.pageNumber);
+    }
 
-            refreshPage = () => {
-                window.location.reload();
-            }
+    refreshPage = () => {
+        window.location.reload();
+    }
 
     async explorePlants() {
         try {
@@ -50,17 +47,17 @@ export default class Explore extends Component {
         }
     }
         
-
     render() {
         return (
             <div className="ExplorePage">
-                
+
                 <div className="Logo">
                     <br/>
                     <Link to="/Home" style={{textDecoration:"none"}}>
                     <h1 style={{fontFamily: "Pacifico", fontSize: "35pt", color: "black", position: "relative", top: "2vh", right: "43vw"}}>Seedly</h1>
                     </Link>
                 </div>
+
                 <div className="Navbar">
                     <Link to="/NewPlant" style={{textDecoration:"none"}}>
                     <h2 style={{fontFamily: "Pacifico", fontSize: "20pt", color: "#000000"}}>New Plant&nbsp; &nbsp;</h2>
@@ -115,16 +112,6 @@ export default class Explore extends Component {
                         )
                     })
                 }
-                <div className="Pages">
-                    {/* <Pagination>
-                        <PaginationItem>
-                            <PaginationLink previous onClick={this.backPage, this.explorePlants}  />
-                        </PaginationItem>
-                        <PaginationItem>
-                            <PaginationLink next onClick={this.forwardPage, this.explorePlants} />
-                        </PaginationItem>
-                    </Pagination> */}
-                </div>
                 </div>
             </div>
         )
