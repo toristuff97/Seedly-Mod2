@@ -23,20 +23,6 @@ export default class Explore extends Component {
         this.explorePlants();
     }
 
-    forwardPage = () => {
-        this.setState({pageNumber: 2});
-        console.log(this.pageNumber);
-    }
-
-    backPage = () => {
-        this.setState({pageNumber: 1});
-        console.log(this.pageNumber);
-    }
-
-    refreshPage = () => {
-        window.location.reload();
-    }
-
     async explorePlants() {
         try {
             const res = await axios.get(`${BASE_URL}plants?token=${TOKEN}&filter_not[description]&&filter_not[image_url]`);

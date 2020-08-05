@@ -23,7 +23,6 @@ export default class NewPlant extends Component {
     search = async input => {
         const res = await axios(`${BASE_URL}${TOKEN}&q=${input}`);
         const info = await res.data.data;
-        // console.log(res.data.data);
         this.setState({info: res.data.data})
         console.log(info);
     };
